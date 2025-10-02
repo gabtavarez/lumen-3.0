@@ -1,0 +1,49 @@
+{
+  "comment": "INSTRUÇÕES: Para adicionar ou remover itens do portfólio, edite este arquivo.",
+  "comment2": "Cada item deve ter: id único, titleKey (chave de tradução), descriptionKey, image (URL da imagem) e category",
+  "comment3": "As traduções devem ser adicionadas no arquivo js/translations.js",
+  "items": [
+    {
+      "id": 1,
+      "titleKey": "portfolio.anterior.title",
+      "descriptionKey": "portfolio.anterior.description",
+      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop",
+      "category": "anterior"
+    },
+    {
+      "id": 2,
+      "titleKey": "portfolio.bridges.title",
+      "descriptionKey": "portfolio.bridges.description",
+      "image": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&h=600&fit=crop",
+      "category": "bridges"
+    },
+    {
+      "id": 3,
+      "titleKey": "portfolio.posterior.title",
+      "descriptionKey": "portfolio.posterior.description",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop",
+      "category": "posterior"
+    },
+    {
+      "id": 4,
+      "titleKey": "portfolio.implants.title",
+      "descriptionKey": "portfolio.implants.description",
+      "image": "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&h=600&fit=crop",
+      "category": "implants"
+    },
+    {
+      "id": 5,
+      "titleKey": "portfolio.full.title",
+      "descriptionKey": "portfolio.full.description",
+      "image": "https://images.unsplash.com/photo-1609840112855-9ab5f840f525?w=800&h=600&fit=crop",
+      "category": "full"
+    }
+  ],
+  "instructions": {
+    "pt": "Para adicionar uma nova imagem ao portfólio, adicione um novo objeto no array 'items' acima seguindo o mesmo formato. Você pode usar URLs de imagens hospedadas online ou caminhos relativos para imagens locais (ex: 'images/portfolio/minha-imagem.jpg'). Certifique-se de adicionar as traduções correspondentes no arquivo js/translations.js.",
+    "en": "To add a new image to the portfolio, add a new object to the 'items' array above following the same format. You can use URLs of online hosted images or relative paths for local images (e.g., 'images/portfolio/my-image.jpg'). Make sure to add the corresponding translations in the js/translations.js file.",
+    "de": "Um ein neues Bild zum Portfolio hinzuzufügen, fügen Sie ein neues Objekt zum 'items'-Array oben hinzu, das dem gleichen Format folgt. Sie können URLs von online gehosteten Bildern oder relative Pfade für lokale Bilder verwenden (z.B. 'images/portfolio/mein-bild.jpg'). Stellen Sie sicher, dass Sie die entsprechenden Übersetzungen in der Datei js/translations.js hinzufügen.",
+    "es": "Para agregar una nueva imagen al portafolio, agregue un nuevo objeto al array 'items' arriba siguiendo el mismo formato. Puede usar URLs de imágenes alojadas en línea o rutas relativas para imágenes locales (ej: 'images/portfolio/mi-imagen.jpg'). Asegúrese de agregar las traducciones correspondientes en el archivo js/translations.js."
+  }
+}
+

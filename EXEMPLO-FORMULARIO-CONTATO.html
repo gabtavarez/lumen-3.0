@@ -1,0 +1,361 @@
+<!-- 
+  EXEMPLO DE FORMULÁRIO DE CONTATO
+  
+  Cole este código no index.html, antes da tag </footer>
+  Para ativá-lo, você também precisará configurar um backend ou serviço de email
+-->
+
+<!-- Contact Form Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title" data-translate="contact.title">Entre em Contato</h2>
+        <p class="section-subtitle" data-translate="contact.subtitle">
+            Envie sua mensagem e responderemos em até 24 horas
+        </p>
+        
+        <div class="contact-wrapper">
+            <!-- Contact Info -->
+            <div class="contact-info-box">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Endereço</h4>
+                        <p>São Paulo, SP - Brasil</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telefone</h4>
+                        <p>+55 (11) 91717-5059</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>contato@lumencad.com.br</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horário</h4>
+                        <p>Seg - Sex: 8h às 18h</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-translate="contact.form.name">Nome</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                        placeholder="Seu nome completo"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-translate="contact.form.email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="seu@email.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" data-translate="contact.form.phone">Telefone</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone"
+                        placeholder="(11) 98765-4321"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" data-translate="contact.form.subject">Assunto</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="orcamento">Orçamento</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message" data-translate="contact.form.message">Mensagem</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        required
+                        placeholder="Descreva seu caso ou dúvida..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="cta-button" data-translate="contact.form.submit">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- 
+  CSS ADICIONAL
+  Cole no css/styles.css
+-->
+
+<style>
+/* Contact Section */
+.contact {
+    background: var(--darker-bg);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info-box {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    height: fit-content;
+}
+
+.info-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.info-item h4 {
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.info-item p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--darker-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--text-light);
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(91, 163, 208, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.contact-form .cta-button {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+@media (max-width: 968px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- 
+  JAVASCRIPT ADICIONAL
+  Cole no js/main.js dentro da função initContactForm()
+-->
+
+<script>
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        // Opção 1: Enviar para seu próprio backend
+        /*
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            
+            if (response.ok) {
+                alert('Mensagem enviada com sucesso!');
+                form.reset();
+            } else {
+                alert('Erro ao enviar mensagem. Tente novamente.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Erro ao enviar mensagem. Tente novamente.');
+        }
+        */
+
+        // Opção 2: Usar FormSubmit.co (serviço grátis)
+        // Troque YOUR_EMAIL pelo seu email
+        /*
+        try {
+            const response = await fetch('https://formsubmit.co/YOUR_EMAIL@example.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            
+            alert('Mensagem enviada com sucesso!');
+            form.reset();
+        } catch (error) {
+            alert('Erro ao enviar. Por favor, envie um email diretamente.');
+        }
+        */
+
+        // Opção 3: Abrir cliente de email (temporário)
+        const subject = encodeURIComponent(data.subject);
+        const body = encodeURIComponent(
+            `Nome: ${data.name}\nEmail: ${data.email}\nTelefone: ${data.phone}\n\nMensagem:\n${data.message}`
+        );
+        window.location.href = `mailto:contato@lumencad.com.br?subject=${subject}&body=${body}`;
+    });
+}
+</script>
+
+<!-- 
+  TRADUÇÕES
+  Adicione no js/translations.js em cada idioma
+-->
+
+<!--
+PORTUGUÊS (pt):
+contact: {
+    title: "Entre em Contato",
+    subtitle: "Envie sua mensagem e responderemos em até 24 horas",
+    form: {
+        name: "Nome",
+        email: "Email",
+        phone: "Telefone",
+        subject: "Assunto",
+        message: "Mensagem",
+        submit: "Enviar Mensagem"
+    }
+},
+
+INGLÊS (en):
+contact: {
+    title: "Get in Touch",
+    subtitle: "Send your message and we'll respond within 24 hours",
+    form: {
+        name: "Name",
+        email: "Email",
+        phone: "Phone",
+        subject: "Subject",
+        message: "Message",
+        submit: "Send Message"
+    }
+},
+
+ALEMÃO (de):
+contact: {
+    title: "Kontakt",
+    subtitle: "Senden Sie Ihre Nachricht und wir antworten innerhalb von 24 Stunden",
+    form: {
+        name: "Name",
+        email: "E-Mail",
+        phone: "Telefon",
+        subject: "Betreff",
+        message: "Nachricht",
+        submit: "Nachricht senden"
+    }
+},
+
+ESPANHOL (es):
+contact: {
+    title: "Contacto",
+    subtitle: "Envíe su mensaje y responderemos en 24 horas",
+    form: {
+        name: "Nombre",
+        email: "Correo",
+        phone: "Teléfono",
+        subject: "Asunto",
+        message: "Mensaje",
+        submit: "Enviar Mensaje"
+    }
+}
+-->
+

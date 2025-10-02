@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estúdio de odontologia digital - Design CAD para próteses dentárias de alta precisão">
+    <title>Lumen CAD Design - Estúdio de Odontologia Digital</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/wFcFY77d/Ativo-1.png">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/wFcFY77d/Ativo-1.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--darker-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loading-logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 2rem;
+            animation: loadingPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes loadingPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        
+        .loading-text {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: loadingFade 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes loadingFade {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(91, 163, 208, 0.2);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: loadingSpin 1s linear infinite;
+        }
+        
+        @keyframes loadingSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="https://i.ibb.co/wFcFY77d/Ativo-1.png" alt="Lumen CAD Design" class="loading-logo">
+        <div class="loading-text" data-translate="loading.text">Carregando...</div>
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="https://i.ibb.co/wFcFY77d/Ativo-1.png" alt="Lumen CAD Design Logo" class="logo-image">
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">Lumen CAD</span>
+                        <span class="logo-subtitle">DESIGN</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-translate="nav.home">Início</a></li>
+                    <li><a href="#portfolio" data-translate="nav.portfolio">Portfólio</a></li>
+                    <li><a href="#services" data-translate="nav.services">Serviços</a></li>
+                    <li><a href="#about" data-translate="nav.about">Sobre</a></li>
+                    <li><a href="#workflow" data-translate="nav.workflow">Workflow</a></li>
+                    <li><a href="#guarantees" data-translate="nav.guarantees">Garantias</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="theme-toggle">
+                        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
+                    </div>
+                    <div class="language-selector">
+                        <button class="lang-dropdown-toggle">
+                            <span class="lang-flag" id="currentFlag">🇧🇷</span>
+                            <span class="lang-code" id="currentLang">PT</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <button class="lang-option active" data-lang="pt">
+                                <span class="lang-flag">🇧🇷</span>
+                                <span class="lang-name">Português</span>
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-flag">🇺🇸</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="de">
+                                <span class="lang-flag">🇩🇪</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="lang-flag">🇪🇸</span>
+                                <span class="lang-name">Español</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <div class="hero-logo-icon">
+                        <img src="https://i.ibb.co/wFcFY77d/Ativo-1.png" alt="Lumen CAD Design" class="hero-logo-image">
+                    </div>
+                </div>
+                <p class="hero-subtitle" data-translate="hero.subtitle">ESTÚDIO DE ODONTOLOGIA DIGITAL</p>
+                <h1 class="hero-title">
+                    <span class="highlight">Lumen CAD</span> 
+                    <span data-translate="hero.title">Design</span>
+                </h1>
+                <p class="hero-description" data-translate="hero.description">
+                    Criando sorrisos e próteses odontológicas com soluções de alta precisão para dentistas e laboratórios
+                </p>
+                <a href="https://wa.link/g7x7mp" target="_blank" rel="noopener noreferrer" class="cta-button" data-translate="hero.cta">Solicite um Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-translate="portfolio.title">Portfólio</h2>
+            <p class="section-subtitle" data-translate="portfolio.subtitle">
+                Exemplos da nossa excelência em design CAD para odontologia digital
+            </p>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-translate="services.title">Serviços</h2>
+            <p class="section-subtitle" data-translate="services.subtitle">
+                Transformamos scans intraorais em projetos protéticos digitais prontos para produção
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3 data-translate="services.aesthetic.title">Restaurações Estéticas</h3>
+                    <p data-translate="services.aesthetic.description">
+                        Design CAD de alta precisão para restaurações com foco na estética e funcionalidade
+                    </p>
+                    <ul class="service-features">
+                        <li data-translate="services.aesthetic.feature1">Coroas unitárias anteriores e posteriores</li>
+                        <li data-translate="services.aesthetic.feature2">Facetas laminadas cerâmicas</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 data-translate="services.bridges.title">Próteses Fixas</h3>
+                    <p data-translate="services.bridges.description">
+                        Pontes e estruturas protéticas complexas com distribuição oclusal ideal
+                    </p>
+                    <ul class="service-features">
+                        <li data-translate="services.bridges.feature1">Pontes de 3 ou mais elementos</li>
+                        <li data-translate="services.bridges.feature2">Estruturas múltiplas conectadas</li>
+                        <li data-translate="services.bridges.feature3">Design anatômico personalizado</li>
+                        <li data-translate="services.bridges.feature4">Análise biomecânica avançada</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3 data-translate="services.implants.title">Implantodontia Digital</h3>
+                    <p data-translate="services.implants.description">
+                        Soluções completas para reabilitação sobre implantes
+                    </p>
+                    <ul class="service-features">
+                        <li data-translate="services.implants.feature1">Planejamento reverso</li>
+                        <li data-translate="services.implants.feature2">Análise de espaço protético</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 data-translate="services.planning.title">Planejamento Digital</h3>
+                    <p data-translate="services.planning.description">
+                        Análise e planejamento digital para resultados previsíveis
+                    </p>
+                    <ul class="service-features">
+                        <li data-translate="services.planning.feature1">Enceramento diagnóstico virtual</li>
+                        <li data-translate="services.planning.feature2">DSD (Digital Smile Design)</li>
+                        <li data-translate="services.planning.feature3">Análise facial digital integrada</li>
+                        <li data-translate="services.planning.feature4">Mock-up virtual</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 data-translate="services.complementary.title">Serviços Complementares</h3>
+                    <p data-translate="services.complementary.description">
+                        Soluções adicionais para otimizar seu fluxo digital
+                    </p>
+                    <ul class="service-features">
+                        <li data-translate="services.complementary.feature1">Modelos digitais STL</li>
+                        <li data-translate="services.complementary.feature2">Articulação virtual</li>
+                        <li data-translate="services.complementary.feature3">Consultoria técnica especializada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.title">Sobre a Lumen</h2>
+            <p class="section-subtitle" data-translate="about.subtitle">
+                A constante busca pela excelência no design dental digital
+            </p>
+            <div class="about-content">
+                <p data-translate="about.text1">
+                    Ao longo dos anos, a Lumen CAD Design tornou-se referência em design CAD odontológico, trabalhando ao lado de dentistas e laboratórios de todas as regiões do Brasil e diversos países.
+                </p>
+                <p data-translate="about.text2">
+                    Acreditamos que o equilíbrio entre tecnologia de ponta, técnica refinada e sensibilidade estética é o que torna possível alcançar a excelência em cada caso.
+                </p>
+                <p data-translate="about.text3">
+                    Independente da complexidade, em todos os trabalhos que executamos buscamos o estado da arte. Esse é o nosso principal desafio e objetivo, pois sabemos o impacto positivo de tudo o que realizamos na vida dos pacientes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <h2 class="section-title" data-translate="workflow.title">Workflow Digital</h2>
+            <p class="section-subtitle" data-translate="workflow.subtitle">
+                Como transformamos seus scans em projetos protéticos perfeitos
+            </p>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 data-translate="workflow.step1.title">Envio do Caso Clínico</h3>
+                        <p data-translate="workflow.step1.description">
+                            Você envia os scans intraorais, fotos clínicas e especificações do caso através do nosso sistema seguro.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 data-translate="workflow.step2.title">Análise e Planejamento</h3>
+                        <p data-translate="workflow.step2.description">
+                            Nossa equipe analisa o caso, realiza o planejamento digital e envia proposta detalhada em até 24h.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 data-translate="workflow.step3.title">Design CAD Preciso</h3>
+                        <p data-translate="workflow.step3.description">
+                            Desenvolvemos o design CAD com anatomia perfeita, distribuição oclusal ideal e estética natural.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 data-translate="workflow.step4.title">Revisão e Aprovação</h3>
+                        <p data-translate="workflow.step4.description">
+                            Enviamos preview 3D para sua análise. Ajustes são feitos até sua total satisfação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3 data-translate="workflow.step5.title">Entrega Final</h3>
+                        <p data-translate="workflow.step5.description">
+                            Entregamos os arquivos STL prontos para impressão 3D ou fresagem, com relatório técnico completo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees Section -->
+    <section id="guarantees" class="guarantees">
+        <div class="container">
+            <h2 class="section-title" data-translate="guarantees.title">Nossas Garantias</h2>
+            <p class="section-subtitle" data-translate="guarantees.subtitle">
+                Trabalhamos com total confiança na qualidade do nosso serviço
+            </p>
+            <div class="guarantees-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-translate="guarantees.satisfaction.title">100% de Satisfação</h3>
+                    <p data-translate="guarantees.satisfaction.description">
+                        Garantimos a qualidade do nosso trabalho. Se não ficar satisfeito, refazemos sem custo adicional.
+                    </p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 data-translate="guarantees.first.title">Primeiro Caso Simples Grátis</h3>
+                    <p data-translate="guarantees.first.description">
+                        Teste nossa qualidade sem riscos. Seu primeiro caso simples é por nossa conta.
+                    </p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-translate="guarantees.delivery.title">Entrega Garantida</h3>
+                    <p data-translate="guarantees.delivery.description">
+                        Comprometemo-nos com os prazos. Casos urgentes em até 24h.
+                    </p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-translate="guarantees.support.title">Suporte Especializado</h3>
+                    <p data-translate="guarantees.support.description">
+                        Nossa equipe está sempre disponível para esclarecer dúvidas e oferecer suporte técnico.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3 data-translate="guarantees.cta.title">Pronto para experimentar?</h3>
+                <p data-translate="guarantees.cta.subtitle">Comece seu primeiro caso grátis hoje mesmo!</p>
+                <a href="https://wa.link/g7x7mp" target="_blank" rel="noopener noreferrer" class="cta-button" data-translate="guarantees.cta.button">Solicitar Caso Grátis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img src="https://i.ibb.co/wFcFY77d/Ativo-1.png" alt="Lumen CAD Design Logo" class="logo-image">
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">Lumen CAD™</span>
+                            <span class="logo-subtitle">DESIGN</span>
+                        </div>
+                    </div>
+                    <p data-translate="footer.tagline">
+                        Se você tem alguma dúvida ou quer conhecer a Lumen, entre em contato. Será um prazer atendê-lo!
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 data-translate="footer.contact.title">Contatos</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo, SP - Brasil</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+55 (11) 91717-5059</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@lumencad.com.br</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">Copyright © Lumen CAD Design - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.link/g7x7mp" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text" data-translate="whatsapp.text">Fale conosco</span>
+        </a>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
