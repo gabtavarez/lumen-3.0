@@ -128,6 +128,34 @@ A logo atual está hospedada em: `https://i.ibb.co/wFcFY77d/Ativo-1.png`
 1. Abra `index.html`
 2. Remova o botão de tema da navbar
 
+### 9. PWA (Progressive Web App)
+
+**O site agora é instalável como app!**
+
+**Funcionalidades:**
+- ✅ Instalável na tela inicial
+- ✅ Funciona offline
+- ✅ Push notifications
+- ✅ Performance nativa
+
+**Para personalizar:**
+1. Abra `manifest.json`
+2. Altere nome, descrição, cores
+3. Adicione ícones personalizados
+
+### 10. SEO e Analytics
+
+**SEO implementado:**
+- ✅ Meta tags otimizadas
+- ✅ Schema.org (dados estruturados)
+- ✅ Open Graph (Facebook/WhatsApp)
+- ✅ Twitter Cards
+
+**Para configurar Analytics:**
+1. Abra `index.html`
+2. Procure por `GA_MEASUREMENT_ID`
+3. Substitua pelo seu ID do Google Analytics
+
 ## 🌐 Adicionar Novo Idioma ao Dropdown
 
 1. Abra `index.html` e adicione a nova opção no dropdown:
@@ -168,6 +196,7 @@ const languageData = {
 | WhatsApp Flutuante | `js/translations.js` | `whatsapp.*` |
 | Loading Screen | `js/translations.js` | `loading.*` |
 | Theme Toggle | `js/translations.js` | `theme.*` |
+| PWA | `js/translations.js` | `pwa.*` |
 | Seletor de Idioma | `index.html` e `js/main.js` | Dropdown |
 
 ## 🖼️ Formatos de Imagem Recomendados

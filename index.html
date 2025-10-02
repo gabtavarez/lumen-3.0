@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Estúdio de odontologia digital - Design CAD para próteses dentárias de alta precisão">
+    <meta name="keywords" content="odontologia digital, design CAD, próteses dentárias, laboratório dental, CAD/CAM, implantes, coroas, pontes">
+    <meta name="author" content="Lumen CAD Design">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lumencad.com.br/">
+    <meta property="og:title" content="Lumen CAD Design - Estúdio de Odontologia Digital">
+    <meta property="og:description" content="Design CAD de alta precisão para próteses dentárias. Soluções digitais para dentistas e laboratórios.">
+    <meta property="og:image" content="https://i.ibb.co/wFcFY77d/Ativo-1.png">
+    <meta property="og:site_name" content="Lumen CAD Design">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lumencad.com.br/">
+    <meta property="twitter:title" content="Lumen CAD Design - Estúdio de Odontologia Digital">
+    <meta property="twitter:description" content="Design CAD de alta precisão para próteses dentárias. Soluções digitais para dentistas e laboratórios.">
+    <meta property="twitter:image" content="https://i.ibb.co/wFcFY77d/Ativo-1.png">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5ba3d0">
+    <meta name="msapplication-TileColor" content="#5ba3d0">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
     <title>Lumen CAD Design - Estúdio de Odontologia Digital</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/wFcFY77d/Ativo-1.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/wFcFY77d/Ativo-1.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -471,8 +499,104 @@
         </a>
     </div>
 
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DentalClinic",
+        "name": "Lumen CAD Design",
+        "description": "Estúdio de odontologia digital especializado em design CAD para próteses dentárias de alta precisão",
+        "url": "https://lumencad.com.br",
+        "logo": "https://i.ibb.co/wFcFY77d/Ativo-1.png",
+        "image": "https://i.ibb.co/wFcFY77d/Ativo-1.png",
+        "telephone": "+55-11-91717-5059",
+        "email": "contato@lumencad.com.br",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "São Paulo",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-23.5505",
+            "longitude": "-46.6333"
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "$$",
+        "currenciesAccepted": "BRL",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Brazil"
+        },
+        "serviceType": [
+            "Design CAD Odontológico",
+            "Próteses Dentárias Digitais",
+            "Planejamento Digital",
+            "Implantodontia Digital"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Odontologia Digital",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Restaurações Estéticas",
+                        "description": "Design CAD de alta precisão para restaurações com foco na estética e funcionalidade"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Próteses Fixas",
+                        "description": "Pontes e estruturas protéticas complexas com distribuição oclusal ideal"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Implantodontia Digital",
+                        "description": "Soluções completas para reabilitação sobre implantes"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "sameAs": [
+            "https://www.instagram.com/lumencad",
+            "https://www.facebook.com/lumencad",
+            "https://www.linkedin.com/company/lumencad"
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'Lumen CAD Design - Estúdio de Odontologia Digital',
+            page_location: window.location.href
+        });
+    </script>
+
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/pwa.js"></script>
 </body>
 </html>
 

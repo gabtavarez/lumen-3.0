@@ -523,5 +523,10 @@
         portfolioItems
     };
 
+    // Initialize PWA after main app
+    if (typeof LumenPWA !== 'undefined') {
+        console.log('🚀 PWA: Integration ready');
+    }
+
 })();
 

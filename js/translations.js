@@ -152,6 +152,12 @@ const translations = {
         },
         theme: {
             toggle: "Alternar tema"
+        },
+        pwa: {
+            install: "Instalar App",
+            update: "Nova versão disponível!",
+            update_button: "Atualizar",
+            offline: "Você está offline"
         }
     },
     en: {
@@ -303,6 +309,12 @@ const translations = {
         },
         theme: {
             toggle: "Toggle theme"
+        },
+        pwa: {
+            install: "Install App",
+            update: "New version available!",
+            update_button: "Update",
+            offline: "You are offline"
         }
     },
     de: {
@@ -454,6 +466,12 @@ const translations = {
         },
         theme: {
             toggle: "Thema wechseln"
+        },
+        pwa: {
+            install: "App installieren",
+            update: "Neue Version verfügbar!",
+            update_button: "Aktualisieren",
+            offline: "Sie sind offline"
         }
     },
     es: {
@@ -605,6 +623,12 @@ const translations = {
         },
         theme: {
             toggle: "Cambiar tema"
+        },
+        pwa: {
+            install: "Instalar App",
+            update: "¡Nueva versión disponible!",
+            update_button: "Actualizar",
+            offline: "Estás offline"
         }
     }
 };
