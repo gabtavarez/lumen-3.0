@@ -158,6 +158,60 @@ const translations = {
             update: "Nova versão disponível!",
             update_button: "Atualizar",
             offline: "Você está offline"
+        },
+        beforeAfter: {
+            title: "Transformações Reais",
+            subtitle: "Veja a precisão e qualidade do nosso trabalho",
+            before: "Antes",
+            after: "Depois",
+            case1: {
+                title: "Coroa Anterior - Cerâmica",
+                description: "Precisão de 0.05mm com anatomia natural perfeita"
+            },
+            case2: {
+                title: "Prótese Sobre Implante",
+                description: "Planejamento reverso e ajuste oclusal perfeito"
+            },
+            case3: {
+                title: "Ponte Fixa - 3 Elementos",
+                description: "Distribuição oclusal ideal e estética harmônica"
+            }
+        },
+        faq: {
+            title: "Perguntas Frequentes",
+            subtitle: "Tire suas dúvidas sobre nossos serviços",
+            q1: {
+                question: "Quanto tempo leva para receber meu projeto?",
+                answer: "Projetos normais: 2-3 dias úteis. Casos urgentes: até 24 horas. Você acompanha o status em tempo real e recebe atualizações por e-mail."
+            },
+            q2: {
+                question: "Quais formatos de arquivo vocês aceitam?",
+                answer: "Aceitamos STL, PLY e OBJ para scans 3D, além de JPG/PNG para fotos. Trabalhamos com arquivos de qualquer scanner intraoral do mercado."
+            },
+            q3: {
+                question: "O primeiro caso é realmente grátis?",
+                answer: "Sim! Oferecemos um caso simples (coroa unitária) totalmente grátis para você testar nossa qualidade sem compromisso. É nossa forma de demonstrar confiança no nosso trabalho."
+            },
+            q4: {
+                question: "Como funciona a revisão do projeto?",
+                answer: "Enviamos um preview 3D para sua aprovação. Você pode solicitar ajustes ilimitados até ficar 100% satisfeito com o resultado. Não cobramos nada extra por revisões."
+            },
+            q5: {
+                question: "Vocês trabalham com laboratórios ou só dentistas?",
+                answer: "Trabalhamos com ambos! Temos soluções específicas para dentistas individuais e também para laboratórios de grande volume. Entre em contato para conhecer nossas parcerias especiais."
+            },
+            q6: {
+                question: "Qual é a garantia de qualidade?",
+                answer: "Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional. Nossa taxa de aprovação é superior a 98%."
+            },
+            q7: {
+                question: "Como faço para enviar meu caso?",
+                answer: "É muito simples! Entre em contato via WhatsApp ou e-mail, envie os scans e fotos, descreva o caso e pronto. Você receberá uma proposta em até 24h e pode acompanhar tudo online."
+            },
+            q8: {
+                question: "Quais são as formas de pagamento?",
+                answer: "Aceitamos PIX, transferência bancária, cartão de crédito e boleto. Para laboratórios parceiros, oferecemos condições especiais de pagamento."
+            }
         }
     },
     en: {
@@ -315,6 +369,60 @@ const translations = {
             update: "New version available!",
             update_button: "Update",
             offline: "You are offline"
+        },
+        beforeAfter: {
+            title: "Real Transformations",
+            subtitle: "See the precision and quality of our work",
+            before: "Before",
+            after: "After",
+            case1: {
+                title: "Anterior Crown - Ceramic",
+                description: "0.05mm precision with perfect natural anatomy"
+            },
+            case2: {
+                title: "Implant-Supported Prosthesis",
+                description: "Reverse planning and perfect occlusal adjustment"
+            },
+            case3: {
+                title: "Fixed Bridge - 3 Units",
+                description: "Ideal occlusal distribution and harmonic aesthetics"
+            }
+        },
+        faq: {
+            title: "Frequently Asked Questions",
+            subtitle: "Get answers about our services",
+            q1: {
+                question: "How long does it take to receive my project?",
+                answer: "Normal projects: 2-3 business days. Urgent cases: up to 24 hours. You can track the status in real-time and receive email updates."
+            },
+            q2: {
+                question: "What file formats do you accept?",
+                answer: "We accept STL, PLY and OBJ for 3D scans, plus JPG/PNG for photos. We work with files from any intraoral scanner on the market."
+            },
+            q3: {
+                question: "Is the first case really free?",
+                answer: "Yes! We offer a simple case (single crown) completely free so you can test our quality without commitment. It's our way of demonstrating confidence in our work."
+            },
+            q4: {
+                question: "How does the project review work?",
+                answer: "We send a 3D preview for your approval. You can request unlimited adjustments until you are 100% satisfied with the result. We don't charge extra for revisions."
+            },
+            q5: {
+                question: "Do you work with laboratories or just dentists?",
+                answer: "We work with both! We have specific solutions for individual dentists and also for high-volume laboratories. Contact us to learn about our special partnerships."
+            },
+            q6: {
+                question: "What is the quality guarantee?",
+                answer: "We offer a 100% satisfaction guarantee. If the project doesn't meet your expectations, we redo it at no additional cost. Our approval rate is over 98%."
+            },
+            q7: {
+                question: "How do I submit my case?",
+                answer: "It's very simple! Contact us via WhatsApp or email, send the scans and photos, describe the case and that's it. You will receive a proposal within 24h and can track everything online."
+            },
+            q8: {
+                question: "What are the payment methods?",
+                answer: "We accept PIX, bank transfer, credit card and bank slip. For partner laboratories, we offer special payment conditions."
+            }
         }
     },
     de: {
@@ -472,6 +580,60 @@ const translations = {
             update: "Neue Version verfügbar!",
             update_button: "Aktualisieren",
             offline: "Sie sind offline"
+        },
+        beforeAfter: {
+            title: "Echte Transformationen",
+            subtitle: "Sehen Sie die Präzision und Qualität unserer Arbeit",
+            before: "Vorher",
+            after: "Nachher",
+            case1: {
+                title: "Frontzahnkrone - Keramik",
+                description: "0,05 mm Präzision mit perfekter natürlicher Anatomie"
+            },
+            case2: {
+                title: "Implantatgetragene Prothese",
+                description: "Umgekehrte Planung und perfekte okklusale Anpassung"
+            },
+            case3: {
+                title: "Festsitzende Brücke - 3 Einheiten",
+                description: "Ideale okklusale Verteilung und harmonische Ästhetik"
+            }
+        },
+        faq: {
+            title: "Häufig gestellte Fragen",
+            subtitle: "Erhalten Sie Antworten zu unseren Dienstleistungen",
+            q1: {
+                question: "Wie lange dauert es, bis ich mein Projekt erhalte?",
+                answer: "Normale Projekte: 2-3 Werktage. Dringende Fälle: bis zu 24 Stunden. Sie können den Status in Echtzeit verfolgen und E-Mail-Updates erhalten."
+            },
+            q2: {
+                question: "Welche Dateiformate akzeptieren Sie?",
+                answer: "Wir akzeptieren STL, PLY und OBJ für 3D-Scans sowie JPG/PNG für Fotos. Wir arbeiten mit Dateien von jedem Intraoralscanner auf dem Markt."
+            },
+            q3: {
+                question: "Ist der erste Fall wirklich kostenlos?",
+                answer: "Ja! Wir bieten einen einfachen Fall (Einzelkrone) völlig kostenlos an, damit Sie unsere Qualität ohne Verpflichtung testen können. Das ist unsere Art, Vertrauen in unsere Arbeit zu zeigen."
+            },
+            q4: {
+                question: "Wie funktioniert die Projektüberprüfung?",
+                answer: "Wir senden eine 3D-Vorschau zur Genehmigung. Sie können unbegrenzte Anpassungen anfordern, bis Sie zu 100% zufrieden sind. Wir berechnen nichts extra für Überarbeitungen."
+            },
+            q5: {
+                question: "Arbeiten Sie mit Laboren oder nur mit Zahnärzten?",
+                answer: "Wir arbeiten mit beiden! Wir haben spezifische Lösungen für einzelne Zahnärzte und auch für Großlabore. Kontaktieren Sie uns, um mehr über unsere Sonderpartnerschaften zu erfahren."
+            },
+            q6: {
+                question: "Was ist die Qualitätsgarantie?",
+                answer: "Wir bieten eine 100%ige Zufriedenheitsgarantie. Wenn das Projekt Ihre Erwartungen nicht erfüllt, erstellen wir es ohne zusätzliche Kosten neu. Unsere Genehmigungsrate liegt bei über 98%."
+            },
+            q7: {
+                question: "Wie reiche ich meinen Fall ein?",
+                answer: "Es ist ganz einfach! Kontaktieren Sie uns per WhatsApp oder E-Mail, senden Sie die Scans und Fotos, beschreiben Sie den Fall und das war's. Sie erhalten innerhalb von 24 Stunden ein Angebot und können alles online verfolgen."
+            },
+            q8: {
+                question: "Welche Zahlungsmethoden gibt es?",
+                answer: "Wir akzeptieren PIX, Banküberweisung, Kreditkarte und Bankeinzug. Für Partnerlabore bieten wir spezielle Zahlungsbedingungen an."
+            }
         }
     },
     es: {
@@ -629,6 +791,60 @@ const translations = {
             update: "¡Nueva versión disponible!",
             update_button: "Actualizar",
             offline: "Estás offline"
+        },
+        beforeAfter: {
+            title: "Transformaciones Reales",
+            subtitle: "Ve la precisión y calidad de nuestro trabajo",
+            before: "Antes",
+            after: "Después",
+            case1: {
+                title: "Corona Anterior - Cerámica",
+                description: "Precisión de 0.05mm con anatomía natural perfecta"
+            },
+            case2: {
+                title: "Prótesis Sobre Implante",
+                description: "Planificación inversa y ajuste oclusal perfecto"
+            },
+            case3: {
+                title: "Puente Fijo - 3 Elementos",
+                description: "Distribución oclusal ideal y estética armónica"
+            }
+        },
+        faq: {
+            title: "Preguntas Frecuentes",
+            subtitle: "Aclara tus dudas sobre nuestros servicios",
+            q1: {
+                question: "¿Cuánto tiempo tarda en recibir mi proyecto?",
+                answer: "Proyectos normales: 2-3 días hábiles. Casos urgentes: hasta 24 horas. Puedes seguir el estado en tiempo real y recibir actualizaciones por correo."
+            },
+            q2: {
+                question: "¿Qué formatos de archivo aceptan?",
+                answer: "Aceptamos STL, PLY y OBJ para escaneos 3D, además de JPG/PNG para fotos. Trabajamos con archivos de cualquier escáner intraoral del mercado."
+            },
+            q3: {
+                question: "¿El primer caso es realmente gratis?",
+                answer: "¡Sí! Ofrecemos un caso simple (corona unitaria) totalmente gratis para que pruebes nuestra calidad sin compromiso. Es nuestra forma de demostrar confianza en nuestro trabajo."
+            },
+            q4: {
+                question: "¿Cómo funciona la revisión del proyecto?",
+                answer: "Enviamos una vista previa 3D para tu aprobación. Puedes solicitar ajustes ilimitados hasta estar 100% satisfecho con el resultado. No cobramos nada extra por revisiones."
+            },
+            q5: {
+                question: "¿Trabajan con laboratorios o solo con dentistas?",
+                answer: "¡Trabajamos con ambos! Tenemos soluciones específicas para dentistas individuales y también para laboratorios de gran volumen. Contáctanos para conocer nuestras asociaciones especiales."
+            },
+            q6: {
+                question: "¿Cuál es la garantía de calidad?",
+                answer: "Ofrecemos garantía de satisfacción del 100%. Si el proyecto no cumple con tus expectativas, lo rehacemos sin costo adicional. Nuestra tasa de aprobación es superior al 98%."
+            },
+            q7: {
+                question: "¿Cómo envío mi caso?",
+                answer: "¡Es muy simple! Contáctanos por WhatsApp o correo, envía los escaneos y fotos, describe el caso y listo. Recibirás una propuesta en 24h y podrás seguir todo en línea."
+            },
+            q8: {
+                question: "¿Cuáles son las formas de pago?",
+                answer: "Aceptamos PIX, transferencia bancaria, tarjeta de crédito y boleto. Para laboratorios asociados, ofrecemos condiciones especiales de pago."
+            }
         }
     }
 };

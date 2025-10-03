@@ -1,0 +1,261 @@
+/* ===========================
+   BEFORE/AFTER SECTION
+   =========================== */
+
+.before-after {
+    padding: 100px 0;
+    background: var(--darker-bg);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.comparison-item {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.comparison-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.comparison-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    aspect-ratio: 3/2;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+.comparison-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-before,
+.img-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-after {
+    clip-path: polygon(0 0, var(--slider-position, 50%) 0, var(--slider-position, 50%) 100%, 0 100%);
+}
+
+.comparison-line {
+    position: absolute;
+    top: 0;
+    left: var(--slider-position, 50%);
+    width: 3px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.comparison-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.comparison-line::after {
+    content: '⇄';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.comparison-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 3;
+}
+
+.comparison-labels {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.label-before {
+    color: var(--text-gray);
+}
+
+.label-after {
+    color: var(--primary-color);
+}
+
+.comparison-item h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.comparison-item p {
+    margin-top: 8px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   FAQ SECTION
+   =========================== */
+
+.faq {
+    padding: 100px 0;
+    background: var(--dark-bg);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 60px auto 0;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 25px 30px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    font-size: 1rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    padding: 0 30px 30px;
+    color: var(--text-gray);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+        font-size: 1rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 20px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .comparison-line::before {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .comparison-line::after {
+        font-size: 18px;
+    }
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item.active .faq-answer p {
+    animation: slideDown 0.4s ease-out;
+}
+
+

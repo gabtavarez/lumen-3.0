@@ -2,6 +2,22 @@
    CSS Variables & Reset
    =========================== */
 
+   /* Estilo Básico para a tag <a> com a classe 'botao' */s
+
+/* Efeito de HOVER (quando o mouse passa por cima) */
+.botao:hover {
+    background-color: #0056b3; /* Escurece a cor de fundo */
+    transform: translateY(-2px); /* Efeito de 'levantar' */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+}
+
+/* Efeito de ATIVO (enquanto o botão está sendo clicado) */
+.botao:active {
+    background-color: #004085; /* Escurece mais */
+    transform: translateY(0); /* Volta para o lugar */
+    box-shadow: none; /* Remove a sombra */
+}
+
 :root {
     --primary-color: #5ba3d0;
     --secondary-color: #4a8bb8;

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Novas Funcionalidades</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/new-features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1>🧪 TESTE DAS NOVAS FUNCIONALIDADES</h1>
+    
+    <!-- FAQ Test -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ - Teste</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Teste FAQ - Clique aqui</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>✅ FAQ funcionando! Esta é uma resposta de teste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Test -->
+    <section id="before-after" class="before-after">
+        <div class="container">
+            <h2 class="section-title">Antes/Depois - Teste</h2>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <div class="comparison-slider">
+                        <div class="comparison-images">
+                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop" alt="Antes" class="img-before">
+                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop" alt="Depois" class="img-after">
+                        </div>
+                        <div class="comparison-line"></div>
+                        <input type="range" class="comparison-range" min="0" max="100" value="50">
+                    </div>
+                    <div class="comparison-labels">
+                        <span class="label-before">Antes</span>
+                        <span class="label-after">Depois</span>
+                    </div>
+                    <h3>✅ Slider Funcionando!</h3>
+                    <p>Arraste o slider para testar a funcionalidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/new-features.js"></script>
+    
+    <script>
+        console.log('🧪 Teste carregado!');
+        console.log('✅ CSS carregado:', document.querySelector('link[href="css/new-features.css"]') ? 'SIM' : 'NÃO');
+        console.log('✅ JS carregado:', typeof document.querySelectorAll === 'function' ? 'SIM' : 'NÃO');
+    </script>
+</body>
+</html>
