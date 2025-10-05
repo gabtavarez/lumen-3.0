@@ -86,9 +86,9 @@ const translations = {
         about: {
             title: "Sobre a Lumen",
             subtitle: "A constante busca pela excelência no design dental digital",
-            text1: "Ao longo dos anos, a Lumen CAD Design tornou-se referência em design CAD odontológico, trabalhando ao lado de dentistas e laboratórios de todas as regiões do Brasil e diversos países.",
-            text2: "Acreditamos que o equilíbrio entre tecnologia de ponta, técnica refinada e sensibilidade estética é o que torna possível alcançar a excelência em cada caso.",
-            text3: "Independente da complexidade, em todos os trabalhos que executamos buscamos o estado da arte. Esse é o nosso principal desafio e objetivo, pois sabemos o impacto positivo de tudo o que realizamos na vida dos pacientes."
+            text1: "A Lumen CAD Design é um estúdio de odontologia digital especializado em atender dentistas e laboratórios, oferecendo soluções precisas e personalizadas em prótese e design odontológico.",
+            text2: "Nosso compromisso é transformar cada caso em uma obra de excelência, independente da sua complexidade. Buscamos constantemente o estado da arte em todos os trabalhos que realizamos, unindo tecnologia, técnica e sensibilidade estética.",
+            text3: "Acreditamos que cada detalhe faz diferença. Por isso, entregamos resultados que não apenas superam expectativas profissionais, mas também geram impacto real e positivo na vida dos pacientes."
         },
         workflow: {
             title: "Workflow Digital",
@@ -184,7 +184,7 @@ const translations = {
             subtitle: "Tire suas dúvidas sobre nossos serviços",
             q1: {
                 question: "Quanto tempo leva para receber meu projeto?",
-                answer: "Projetos normais: 2-3 dias úteis. Casos urgentes: até 24 horas. Você acompanha o status em tempo real e recebe atualizações por e-mail."
+                answer: "Projetos normais: 2 dias úteis. Casos urgentes: até 24 horas. Você recebe atualizações por e-mail."
             },
             q2: {
                 question: "Quais formatos de arquivo vocês aceitam?",
@@ -204,7 +204,7 @@ const translations = {
             },
             q6: {
                 question: "Qual é a garantia de qualidade?",
-                answer: "Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional. Nossa taxa de aprovação é superior a 98%."
+                answer: "Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional."
             },
             q7: {
                 question: "Como faço para enviar meu caso?",
@@ -212,7 +212,7 @@ const translations = {
             },
             q8: {
                 question: "Quais são as formas de pagamento?",
-                answer: "Aceitamos PIX, transferência bancária, cartão de crédito e boleto. Para laboratórios parceiros, oferecemos condições especiais de pagamento."
+                answer: "Aceitamos PIX, transferência bancária, cartão de crédito e boleto."
             }
         }
     },
@@ -299,9 +299,9 @@ const translations = {
         about: {
             title: "About Lumen",
             subtitle: "The constant pursuit of excellence in digital dental design",
-            text1: "Over the years, Lumen CAD Design has become a reference in dental CAD design, working alongside dentists and laboratories from all regions of Brazil and several countries.",
-            text2: "We believe that the balance between cutting-edge technology, refined technique and aesthetic sensitivity is what makes it possible to achieve excellence in each case.",
-            text3: "Regardless of complexity, in all the work we carry out we seek the state of the art. This is our main challenge and goal, as we know the positive impact of everything we do on patients' lives."
+            text1: "Lumen CAD Design is a digital dentistry studio specialized in serving dentists and laboratories, offering precise and personalized solutions in prosthetics and dental design.",
+            text2: "Our commitment is to transform each case into a work of excellence, regardless of its complexity. We constantly seek the state of the art in all the work we perform, combining technology, technique and aesthetic sensitivity.",
+            text3: "We believe that every detail makes a difference. That's why we deliver results that not only exceed professional expectations, but also generate real and positive impact on patients' lives."
         },
         workflow: {
             title: "Digital Workflow",
@@ -397,7 +397,7 @@ const translations = {
             subtitle: "Get answers about our services",
             q1: {
                 question: "How long does it take to receive my project?",
-                answer: "Normal projects: 2-3 business days. Urgent cases: up to 24 hours. You can track the status in real-time and receive email updates."
+                answer: "Normal projects: 2 business days. Urgent cases: up to 24 hours. You receive email updates."
             },
             q2: {
                 question: "What file formats do you accept?",
@@ -417,7 +417,7 @@ const translations = {
             },
             q6: {
                 question: "What is the quality guarantee?",
-                answer: "We offer a 100% satisfaction guarantee. If the project doesn't meet your expectations, we redo it at no additional cost. Our approval rate is over 98%."
+                answer: "We offer a 100% satisfaction guarantee. If the project doesn't meet your expectations, we redo it at no additional cost."
             },
             q7: {
                 question: "How do I submit my case?",
@@ -425,7 +425,7 @@ const translations = {
             },
             q8: {
                 question: "What are the payment methods?",
-                answer: "We accept PIX, bank transfer, credit card and bank slip. For partner laboratories, we offer special payment conditions."
+                answer: "We accept PIX, bank transfer, credit card and bank slip."
             }
         }
     },
@@ -512,9 +512,9 @@ const translations = {
         about: {
             title: "Über Lumen",
             subtitle: "Das ständige Streben nach Exzellenz im digitalen Zahndesign",
-            text1: "Im Laufe der Jahre hat sich Lumen CAD Design zu einer Referenz im zahnmedizinischen CAD-Design entwickelt und arbeitet mit Zahnärzten und Laboren aus allen Regionen Brasiliens und mehreren Ländern zusammen.",
-            text2: "Wir glauben, dass das Gleichgewicht zwischen modernster Technologie, raffinierter Technik und ästhetischer Sensibilität es ermöglicht, in jedem Fall Exzellenz zu erreichen.",
-            text3: "Unabhängig von der Komplexität streben wir bei allen unseren Arbeiten nach dem Stand der Technik. Das ist unsere Hauptherausforderung und unser Ziel, denn wir kennen die positive Auswirkung all dessen, was wir tun, auf das Leben der Patienten."
+            text1: "Lumen CAD Design ist ein digitales Zahnmedizin-Studio, das sich auf die Betreuung von Zahnärzten und Laboren spezialisiert hat und präzise, personalisierte Lösungen in Prothetik und Zahndesign anbietet.",
+            text2: "Unser Engagement ist es, jeden Fall in ein Werk der Exzellenz zu verwandeln, unabhängig von seiner Komplexität. Wir streben ständig nach dem Stand der Technik in all unseren Arbeiten und verbinden Technologie, Technik und ästhetische Sensibilität.",
+            text3: "Wir glauben, dass jedes Detail einen Unterschied macht. Deshalb liefern wir Ergebnisse, die nicht nur professionelle Erwartungen übertreffen, sondern auch echte und positive Auswirkungen auf das Leben der Patienten haben."
         },
         workflow: {
             title: "Digitaler Arbeitsablauf",
@@ -610,7 +610,7 @@ const translations = {
             subtitle: "Erhalten Sie Antworten zu unseren Dienstleistungen",
             q1: {
                 question: "Wie lange dauert es, bis ich mein Projekt erhalte?",
-                answer: "Normale Projekte: 2-3 Werktage. Dringende Fälle: bis zu 24 Stunden. Sie können den Status in Echtzeit verfolgen und E-Mail-Updates erhalten."
+                answer: "Normale Projekte: 2 Werktage. Dringende Fälle: bis zu 24 Stunden. Sie erhalten E-Mail-Updates."
             },
             q2: {
                 question: "Welche Dateiformate akzeptieren Sie?",
@@ -630,7 +630,7 @@ const translations = {
             },
             q6: {
                 question: "Was ist die Qualitätsgarantie?",
-                answer: "Wir bieten eine 100%ige Zufriedenheitsgarantie. Wenn das Projekt Ihre Erwartungen nicht erfüllt, erstellen wir es ohne zusätzliche Kosten neu. Unsere Genehmigungsrate liegt bei über 98%."
+                answer: "Wir bieten eine 100%ige Zufriedenheitsgarantie. Wenn das Projekt Ihre Erwartungen nicht erfüllt, erstellen wir es ohne zusätzliche Kosten neu."
             },
             q7: {
                 question: "Wie reiche ich meinen Fall ein?",
@@ -638,7 +638,7 @@ const translations = {
             },
             q8: {
                 question: "Welche Zahlungsmethoden gibt es?",
-                answer: "Wir akzeptieren PIX, Banküberweisung, Kreditkarte und Bankeinzug. Für Partnerlabore bieten wir spezielle Zahlungsbedingungen an."
+                answer: "Wir akzeptieren PIX, Banküberweisung, Kreditkarte und Bankeinzug."
             }
         }
     },
@@ -725,9 +725,9 @@ const translations = {
         about: {
             title: "Acerca de Lumen",
             subtitle: "La búsqueda constante de la excelencia en el diseño dental digital",
-            text1: "A lo largo de los años, Lumen CAD Design se ha convertido en una referencia en diseño CAD dental, trabajando junto a dentistas y laboratorios de todas las regiones de Brasil y varios países.",
-            text2: "Creemos que el equilibrio entre tecnología de punta, técnica refinada y sensibilidad estética es lo que hace posible alcanzar la excelencia en cada caso.",
-            text3: "Independientemente de la complejidad, en todos los trabajos que realizamos buscamos el estado del arte. Este es nuestro principal desafío y objetivo, ya que conocemos el impacto positivo de todo lo que hacemos en la vida de los pacientes."
+            text1: "Lumen CAD Design es un estudio de odontología digital especializado en atender dentistas y laboratorios, ofreciendo soluciones precisas y personalizadas en prótesis y diseño dental.",
+            text2: "Nuestro compromiso es transformar cada caso en una obra de excelencia, independientemente de su complejidad. Buscamos constantemente el estado del arte en todos los trabajos que realizamos, uniendo tecnología, técnica y sensibilidad estética.",
+            text3: "Creemos que cada detalle hace la diferencia. Por eso, entregamos resultados que no solo superan las expectativas profesionales, sino que también generan un impacto real y positivo en la vida de los pacientes."
         },
         workflow: {
             title: "Flujo de trabajo digital",
@@ -823,7 +823,7 @@ const translations = {
             subtitle: "Aclara tus dudas sobre nuestros servicios",
             q1: {
                 question: "¿Cuánto tiempo tarda en recibir mi proyecto?",
-                answer: "Proyectos normales: 2-3 días hábiles. Casos urgentes: hasta 24 horas. Puedes seguir el estado en tiempo real y recibir actualizaciones por correo."
+                answer: "Proyectos normales: 2 días hábiles. Casos urgentes: hasta 24 horas. Recibes actualizaciones por correo."
             },
             q2: {
                 question: "¿Qué formatos de archivo aceptan?",
@@ -843,7 +843,7 @@ const translations = {
             },
             q6: {
                 question: "¿Cuál es la garantía de calidad?",
-                answer: "Ofrecemos garantía de satisfacción del 100%. Si el proyecto no cumple con tus expectativas, lo rehacemos sin costo adicional. Nuestra tasa de aprobación es superior al 98%."
+                answer: "Ofrecemos garantía de satisfacción del 100%. Si el proyecto no cumple con tus expectativas, lo rehacemos sin costo adicional."
             },
             q7: {
                 question: "¿Cómo envío mi caso?",
@@ -851,7 +851,7 @@ const translations = {
             },
             q8: {
                 question: "¿Cuáles son las formas de pago?",
-                answer: "Aceptamos PIX, transferencia bancaria, tarjeta de crédito y boleto. Para laboratorios asociados, ofrecemos condiciones especiales de pago."
+                answer: "Aceptamos PIX, transferencia bancaria, tarjeta de crédito y boleto."
             }
         }
     }

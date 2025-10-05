@@ -10,6 +10,11 @@
     <meta name="language" content="pt-BR">
     <meta name="revisit-after" content="7 days">
     
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lumencad.com.br/">
@@ -35,79 +40,11 @@
     <link rel="icon" type="image/png" href="https://i.ibb.co/wFcFY77d/Ativo-1.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/wFcFY77d/Ativo-1.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/new-features.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.0">
+    <link rel="stylesheet" href="css/new-features.css?v=1.0.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Loading Screen */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--darker-bg);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out;
-        }
-        
-        .loading-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .loading-logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 2rem;
-            animation: loadingPulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes loadingPulse {
-            0%, 100% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.1); opacity: 1; }
-        }
-        
-        .loading-text {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            animation: loadingFade 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes loadingFade {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
-        }
-        
-        .loading-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(91, 163, 208, 0.2);
-            border-top: 3px solid var(--primary-color);
-            border-radius: 50%;
-            animation: loadingSpin 1s linear infinite;
-        }
-        
-        @keyframes loadingSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <img src="https://i.ibb.co/wFcFY77d/Ativo-1.png" alt="Lumen CAD Design" class="loading-logo">
-        <div class="loading-text" data-translate="loading.text">Carregando...</div>
-        <div class="loading-spinner"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -127,7 +64,6 @@
                     <li><a href="#services" data-translate="nav.services">Serviços</a></li>
                     <li><a href="#about" data-translate="nav.about">Sobre</a></li>
                     <li><a href="#workflow" data-translate="nav.workflow">Workflow</a></li>
-                    <li><a href="#before-after" data-translate="nav.beforeAfter">Antes/Depois</a></li>
                     <li><a href="#faq" data-translate="nav.faq">FAQ</a></li>
                     <li><a href="#guarantees" data-translate="nav.guarantees">Garantias</a></li>
                 </ul>
@@ -291,7 +227,6 @@
                     </p>
                     <ul class="service-features">
                         <li data-translate="services.complementary.feature1">Modelos digitais STL</li>
-                        <li data-translate="services.complementary.feature2">Articulação virtual</li>
                         <li data-translate="services.complementary.feature3">Consultoria técnica especializada</li>
                     </ul>
                 </div>
@@ -308,13 +243,13 @@
             </p>
             <div class="about-content">
                 <p data-translate="about.text1">
-                    Ao longo dos anos, a Lumen CAD Design tornou-se referência em design CAD odontológico, trabalhando ao lado de dentistas e laboratórios de todas as regiões do Brasil e diversos países.
+                    A Lumen CAD Design é um estúdio de odontologia digital especializado em atender dentistas e laboratórios, oferecendo soluções precisas e personalizadas em prótese e design odontológico.
                 </p>
                 <p data-translate="about.text2">
-                    Acreditamos que o equilíbrio entre tecnologia de ponta, técnica refinada e sensibilidade estética é o que torna possível alcançar a excelência em cada caso.
+                    Nosso compromisso é transformar cada caso em uma obra de excelência, independente da sua complexidade. Buscamos constantemente o estado da arte em todos os trabalhos que realizamos, unindo tecnologia, técnica e sensibilidade estética.
                 </p>
                 <p data-translate="about.text3">
-                    Independente da complexidade, em todos os trabalhos que executamos buscamos o estado da arte. Esse é o nosso principal desafio e objetivo, pois sabemos o impacto positivo de tudo o que realizamos na vida dos pacientes.
+                    Acreditamos que cada detalhe faz diferença. Por isso, entregamos resultados que não apenas superam expectativas profissionais, mas também geram impacto real e positivo na vida dos pacientes.
                 </p>
             </div>
         </div>
@@ -381,67 +316,6 @@
         </div>
     </section>
 
-    <!-- Before/After Section -->
-    <section id="before-after" class="before-after">
-        <div class="container">
-            <h2 class="section-title" data-translate="beforeAfter.title">Transformações Reais</h2>
-            <p class="section-subtitle" data-translate="beforeAfter.subtitle">
-                Veja a precisão e qualidade do nosso trabalho
-            </p>
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <div class="comparison-slider">
-                        <div class="comparison-images">
-                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop" alt="Antes" class="img-before">
-                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop" alt="Depois" class="img-after">
-                        </div>
-                        <div class="comparison-line"></div>
-                        <input type="range" class="comparison-range" min="0" max="100" value="50">
-                    </div>
-                    <div class="comparison-labels">
-                        <span class="label-before" data-translate="beforeAfter.before">Antes</span>
-                        <span class="label-after" data-translate="beforeAfter.after">Depois</span>
-                    </div>
-                    <h3 data-translate="beforeAfter.case1.title">Coroa Anterior - Cerâmica</h3>
-                    <p data-translate="beforeAfter.case1.description">Precisão de 0.05mm com anatomia natural perfeita</p>
-                </div>
-
-                <div class="comparison-item">
-                    <div class="comparison-slider">
-                        <div class="comparison-images">
-                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop" alt="Antes" class="img-before">
-                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop" alt="Depois" class="img-after">
-                        </div>
-                        <div class="comparison-line"></div>
-                        <input type="range" class="comparison-range" min="0" max="100" value="50">
-                    </div>
-                    <div class="comparison-labels">
-                        <span class="label-before" data-translate="beforeAfter.before">Antes</span>
-                        <span class="label-after" data-translate="beforeAfter.after">Depois</span>
-                    </div>
-                    <h3 data-translate="beforeAfter.case2.title">Prótese Sobre Implante</h3>
-                    <p data-translate="beforeAfter.case2.description">Planejamento reverso e ajuste oclusal perfeito</p>
-                </div>
-
-                <div class="comparison-item">
-                    <div class="comparison-slider">
-                        <div class="comparison-images">
-                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop" alt="Antes" class="img-before">
-                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop" alt="Depois" class="img-after">
-                        </div>
-                        <div class="comparison-line"></div>
-                        <input type="range" class="comparison-range" min="0" max="100" value="50">
-                    </div>
-                    <div class="comparison-labels">
-                        <span class="label-before" data-translate="beforeAfter.before">Antes</span>
-                        <span class="label-after" data-translate="beforeAfter.after">Depois</span>
-                    </div>
-                    <h3 data-translate="beforeAfter.case3.title">Ponte Fixa - 3 Elementos</h3>
-                    <p data-translate="beforeAfter.case3.description">Distribuição oclusal ideal e estética harmônica</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
@@ -457,7 +331,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p data-translate="faq.q1.answer">Projetos normais: 2-3 dias úteis. Casos urgentes: até 24 horas. Você acompanha o status em tempo real e recebe atualizações por e-mail.</p>
+                        <p data-translate="faq.q1.answer">Projetos normais: 2 dias úteis. Casos urgentes: até 24 horas. Você recebe atualizações por e-mail.</p>
                     </div>
                 </div>
 
@@ -507,7 +381,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p data-translate="faq.q6.answer">Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional. Nossa taxa de aprovação é superior a 98%.</p>
+                        <p data-translate="faq.q6.answer">Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional.</p>
                     </div>
                 </div>
 
@@ -527,7 +401,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p data-translate="faq.q8.answer">Aceitamos PIX, transferência bancária, cartão de crédito e boleto. Para laboratórios parceiros, oferecemos condições especiais de pagamento.</p>
+                        <p data-translate="faq.q8.answer">Aceitamos PIX, transferência bancária, cartão de crédito e boleto.</p>
                     </div>
                 </div>
             </div>
@@ -768,10 +642,10 @@
     })();
     </script>
 
-    <script src="js/translations.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/new-features.js"></script>
-    <script src="js/pwa.js"></script>
+    <script src="js/translations.js?v=1.0.0"></script>
+    <script src="js/main.js?v=1.0.0"></script>
+    <script src="js/new-features.js?v=1.0.0"></script>
+    <script src="js/pwa.js?v=1.0.0"></script>
 </body>
 </html>
 
