@@ -25,7 +25,7 @@ const translations = {
             subtitle: "Exemplos da nossa excelência em design CAD para odontologia digital",
             anterior: {
                 title: "Restaurações Anteriores",
-                description: "Design de facetas e coroas anteriores com anatomia perfeita e estética natural, garantindo sorrisos harmoniosos."
+                description: "Design de facetas e coroas anteriores com anatomia perfeita e estética natural."
             },
             bridges: {
                 title: "Próteses Fixas",
@@ -37,11 +37,11 @@ const translations = {
             },
             implants: {
                 title: "Implantodontia",
-                description: "Guias cirúrgicos precisos, barras sobre implantes e planejamento digital completo para casos complexos."
+                description: "Implantes e planejamento digital completo para casos complexos."
             },
             full: {
                 title: "Encerramentos",
-                description: "Encerramentos diagnósticos e estéticos virtuais para planejamento prévio de casos complexos e análise de resultados."
+                description: "Encerramentos diagnósticos e estéticos para planejamento prévio de casos complexos e análise de resultados."
             }
         },
         services: {
@@ -238,7 +238,7 @@ const translations = {
             subtitle: "Examples of our excellence in CAD design for digital dentistry",
             anterior: {
                 title: "Anterior Restorations",
-                description: "Design of veneers and anterior crowns with perfect anatomy and natural aesthetics, ensuring harmonious smiles."
+                description: "Design of veneers and anterior crowns with perfect anatomy and natural aesthetics."
             },
             bridges: {
                 title: "Fixed Prostheses",
@@ -250,11 +250,11 @@ const translations = {
             },
             implants: {
                 title: "Implantology",
-                description: "Precise surgical guides, bars on implants and complete digital planning for complex cases."
+                description: "Implants and complete digital planning for complex cases."
             },
             full: {
                 title: "Wax-ups",
-                description: "Virtual diagnostic and aesthetic wax-ups for prior planning of complex cases and outcome analysis."
+                description: "Diagnostic and aesthetic wax-ups for prior planning of complex cases and outcome analysis."
             }
         },
         services: {
@@ -451,7 +451,7 @@ const translations = {
             subtitle: "Beispiele unserer Exzellenz im CAD-Design für digitale Zahnmedizin",
             anterior: {
                 title: "Anteriore Restaurationen",
-                description: "Design von Veneers und anterioren Kronen mit perfekter Anatomie und natürlicher Ästhetik für harmonische Lächeln."
+                description: "Design von Veneers und anterioren Kronen mit perfekter Anatomie und natürlicher Ästhetik."
             },
             bridges: {
                 title: "Festsitzende Prothesen",
@@ -463,11 +463,11 @@ const translations = {
             },
             implants: {
                 title: "Implantologie",
-                description: "Präzise chirurgische Führungen, Stege auf Implantaten und vollständige digitale Planung für komplexe Fälle."
+                description: "Implantate und vollständige digitale Planung für komplexe Fälle."
             },
             full: {
                 title: "Wax-ups",
-                description: "Virtuelle diagnostische und ästhetische Wax-ups zur Vorplanung komplexer Fälle und Ergebnisanalyse."
+                description: "Diagnostische und ästhetische Wax-ups zur Vorplanung komplexer Fälle und Ergebnisanalyse."
             }
         },
         services: {
@@ -664,7 +664,7 @@ const translations = {
             subtitle: "Ejemplos de nuestra excelencia en diseño CAD para odontología digital",
             anterior: {
                 title: "Restauraciones Anteriores",
-                description: "Diseño de carillas y coronas anteriores con anatomía perfecta y estética natural, garantizando sonrisas armoniosas."
+                description: "Diseño de carillas y coronas anteriores con anatomía perfecta y estética natural."
             },
             bridges: {
                 title: "Prótesis Fijas",
@@ -676,11 +676,11 @@ const translations = {
             },
             implants: {
                 title: "Implantología",
-                description: "Guías quirúrgicas precisas, barras sobre implantes y planificación digital completa para casos complejos."
+                description: "Implantes y planificación digital completa para casos complejos."
             },
             full: {
                 title: "Encerados",
-                description: "Encerados diagnósticos y estéticos virtuales para planificación previa de casos complejos y análisis de resultados."
+                description: "Encerados diagnósticos y estéticos para planificación previa de casos complejos y análisis de resultados."
             }
         },
         services: {
