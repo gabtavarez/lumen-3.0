@@ -7,35 +7,35 @@
       "id": 1,
       "titleKey": "portfolio.anterior.title",
       "descriptionKey": "portfolio.anterior.description",
-      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop",
+      "image": "https://i.ibb.co/tpHX7R4Z/20250923-215222-21-alisson-2025-09-23-16.png",
       "category": "anterior"
     },
     {
       "id": 2,
       "titleKey": "portfolio.bridges.title",
       "descriptionKey": "portfolio.bridges.description",
-      "image": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&h=600&fit=crop",
+      "image": "https://i.ibb.co/Y7v810pk/20250925-224852-Portf-lio-upper-456-bridge-5.png",
       "category": "bridges"
     },
     {
       "id": 3,
       "titleKey": "portfolio.posterior.title",
       "descriptionKey": "portfolio.posterior.description",
-      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop",
+      "image": "https://i.ibb.co/gbRm1hrq/20250918-215548-2025-09-18-00003-001-2.png",
       "category": "posterior"
     },
     {
       "id": 4,
       "titleKey": "portfolio.implants.title",
       "descriptionKey": "portfolio.implants.description",
-      "image": "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&h=600&fit=crop",
+      "image": "https://i.ibb.co/8DPzZtgC/20250921-220549-Gustavo-Brunherotto-fernando-castanheira-email-4.png",
       "category": "implants"
     },
     {
       "id": 5,
       "titleKey": "portfolio.full.title",
       "descriptionKey": "portfolio.full.description",
-      "image": "https://images.unsplash.com/photo-1609840112855-9ab5f840f525?w=800&h=600&fit=crop",
+      "image": "https://i.ibb.co/FqWt97BH/20250928-191657-Portf-lio-Case-2-0.png",
       "category": "full"
     }
   ],

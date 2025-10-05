@@ -127,37 +127,42 @@
                     <li><a href="#services" data-translate="nav.services">Serviços</a></li>
                     <li><a href="#about" data-translate="nav.about">Sobre</a></li>
                     <li><a href="#workflow" data-translate="nav.workflow">Workflow</a></li>
-                    <li><a href="#before-after">Antes/Depois</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#before-after" data-translate="nav.beforeAfter">Antes/Depois</a></li>
+                    <li><a href="#faq" data-translate="nav.faq">FAQ</a></li>
                     <li><a href="#guarantees" data-translate="nav.guarantees">Garantias</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <div class="theme-toggle">
-                        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
-                            <i class="fas fa-moon" id="themeIcon"></i>
-                        </button>
-                    </div>
                     <div class="language-selector">
                         <button class="lang-dropdown-toggle">
-                            <span class="lang-flag" id="currentFlag">🇧🇷</span>
+                            <span class="lang-flag" id="currentFlag">
+                                <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#009B3A"/><path d="M0 7.5L10 0L20 7.5L10 15Z" fill="#FEDD00"/><circle cx="10" cy="7.5" r="3" fill="#002776"/></svg>
+                            </span>
                             <span class="lang-code" id="currentLang">PT</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="lang-dropdown-menu">
                             <button class="lang-option active" data-lang="pt">
-                                <span class="lang-flag">🇧🇷</span>
+                                <span class="lang-flag">
+                                    <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#009B3A"/><path d="M0 7.5L10 0L20 7.5L10 15Z" fill="#FEDD00"/><circle cx="10" cy="7.5" r="3" fill="#002776"/></svg>
+                                </span>
                                 <span class="lang-name">Português</span>
                             </button>
                             <button class="lang-option" data-lang="en">
-                                <span class="lang-flag">🇺🇸</span>
+                                <span class="lang-flag">
+                                    <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#B22234"/><rect width="20" height="1.15" fill="#FFFFFF"/><rect y="2.3" width="20" height="1.15" fill="#FFFFFF"/><rect y="4.6" width="20" height="1.15" fill="#FFFFFF"/><rect y="6.9" width="20" height="1.15" fill="#FFFFFF"/><rect y="9.2" width="20" height="1.15" fill="#FFFFFF"/><rect y="11.5" width="20" height="1.15" fill="#FFFFFF"/><rect y="13.85" width="20" height="1.15" fill="#FFFFFF"/><rect width="7.7" height="8.05" fill="#3C3B6E"/></svg>
+                                </span>
                                 <span class="lang-name">English</span>
                             </button>
                             <button class="lang-option" data-lang="de">
-                                <span class="lang-flag">🇩🇪</span>
+                                <span class="lang-flag">
+                                    <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="5" fill="#000000"/><rect y="5" width="20" height="5" fill="#DD0000"/><rect y="10" width="20" height="5" fill="#FFCE00"/></svg>
+                                </span>
                                 <span class="lang-name">Deutsch</span>
                             </button>
                             <button class="lang-option" data-lang="es">
-                                <span class="lang-flag">🇪🇸</span>
+                                <span class="lang-flag">
+                                    <svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="3" fill="#C60B1E"/><rect y="3" width="20" height="9" fill="#FFC400"/><rect y="12" width="20" height="3" fill="#C60B1E"/></svg>
+                                </span>
                                 <span class="lang-name">Español</span>
                             </button>
                         </div>
@@ -379,8 +384,8 @@
     <!-- Before/After Section -->
     <section id="before-after" class="before-after">
         <div class="container">
-            <h2 class="section-title">Transformações Reais</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-translate="beforeAfter.title">Transformações Reais</h2>
+            <p class="section-subtitle" data-translate="beforeAfter.subtitle">
                 Veja a precisão e qualidade do nosso trabalho
             </p>
             <div class="comparison-grid">
@@ -394,11 +399,11 @@
                         <input type="range" class="comparison-range" min="0" max="100" value="50">
                     </div>
                     <div class="comparison-labels">
-                        <span class="label-before">Antes</span>
-                        <span class="label-after">Depois</span>
+                        <span class="label-before" data-translate="beforeAfter.before">Antes</span>
+                        <span class="label-after" data-translate="beforeAfter.after">Depois</span>
                     </div>
-                    <h3>Coroa Anterior - Cerâmica</h3>
-                    <p>Precisão de 0.05mm com anatomia natural perfeita</p>
+                    <h3 data-translate="beforeAfter.case1.title">Coroa Anterior - Cerâmica</h3>
+                    <p data-translate="beforeAfter.case1.description">Precisão de 0.05mm com anatomia natural perfeita</p>
                 </div>
 
                 <div class="comparison-item">
@@ -411,11 +416,11 @@
                         <input type="range" class="comparison-range" min="0" max="100" value="50">
                     </div>
                     <div class="comparison-labels">
-                        <span class="label-before">Antes</span>
-                        <span class="label-after">Depois</span>
+                        <span class="label-before" data-translate="beforeAfter.before">Antes</span>
+                        <span class="label-after" data-translate="beforeAfter.after">Depois</span>
                     </div>
-                    <h3>Prótese Sobre Implante</h3>
-                    <p>Planejamento reverso e ajuste oclusal perfeito</p>
+                    <h3 data-translate="beforeAfter.case2.title">Prótese Sobre Implante</h3>
+                    <p data-translate="beforeAfter.case2.description">Planejamento reverso e ajuste oclusal perfeito</p>
                 </div>
 
                 <div class="comparison-item">
@@ -428,11 +433,11 @@
                         <input type="range" class="comparison-range" min="0" max="100" value="50">
                     </div>
                     <div class="comparison-labels">
-                        <span class="label-before">Antes</span>
-                        <span class="label-after">Depois</span>
+                        <span class="label-before" data-translate="beforeAfter.before">Antes</span>
+                        <span class="label-after" data-translate="beforeAfter.after">Depois</span>
                     </div>
-                    <h3>Ponte Fixa - 3 Elementos</h3>
-                    <p>Distribuição oclusal ideal e estética harmônica</p>
+                    <h3 data-translate="beforeAfter.case3.title">Ponte Fixa - 3 Elementos</h3>
+                    <p data-translate="beforeAfter.case3.description">Distribuição oclusal ideal e estética harmônica</p>
                 </div>
             </div>
         </div>
@@ -441,88 +446,88 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq">
         <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-translate="faq.title">Perguntas Frequentes</h2>
+            <p class="section-subtitle" data-translate="faq.subtitle">
                 Tire suas dúvidas sobre nossos serviços
             </p>
             <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Quanto tempo leva para receber meu projeto?</span>
+                        <span data-translate="faq.q1.question">Quanto tempo leva para receber meu projeto?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Projetos normais: 2-3 dias úteis. Casos urgentes: até 24 horas. Você acompanha o status em tempo real e recebe atualizações por e-mail.</p>
+                        <p data-translate="faq.q1.answer">Projetos normais: 2-3 dias úteis. Casos urgentes: até 24 horas. Você acompanha o status em tempo real e recebe atualizações por e-mail.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Quais formatos de arquivo vocês aceitam?</span>
+                        <span data-translate="faq.q2.question">Quais formatos de arquivo vocês aceitam?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Aceitamos STL, PLY e OBJ para scans 3D, além de JPG/PNG para fotos. Trabalhamos com arquivos de qualquer scanner intraoral do mercado.</p>
+                        <p data-translate="faq.q2.answer">Aceitamos STL, PLY e OBJ para scans 3D, além de JPG/PNG para fotos. Trabalhamos com arquivos de qualquer scanner intraoral do mercado.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>O primeiro caso é realmente grátis?</span>
+                        <span data-translate="faq.q3.question">O primeiro caso é realmente grátis?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Sim! Oferecemos um caso simples (coroa unitária) totalmente grátis para você testar nossa qualidade sem compromisso. É nossa forma de demonstrar confiança no nosso trabalho.</p>
+                        <p data-translate="faq.q3.answer">Sim! Oferecemos um caso simples (coroa unitária) totalmente grátis para você testar nossa qualidade sem compromisso. É nossa forma de demonstrar confiança no nosso trabalho.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Como funciona a revisão do projeto?</span>
+                        <span data-translate="faq.q4.question">Como funciona a revisão do projeto?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Enviamos um preview 3D para sua aprovação. Você pode solicitar ajustes ilimitados até ficar 100% satisfeito com o resultado. Não cobramos nada extra por revisões.</p>
+                        <p data-translate="faq.q4.answer">Enviamos um preview 3D para sua aprovação. Você pode solicitar ajustes ilimitados até ficar 100% satisfeito com o resultado. Não cobramos nada extra por revisões.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Vocês trabalham com laboratórios ou só dentistas?</span>
+                        <span data-translate="faq.q5.question">Vocês trabalham com laboratórios ou só dentistas?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Trabalhamos com ambos! Temos soluções específicas para dentistas individuais e também para laboratórios de grande volume. Entre em contato para conhecer nossas parcerias especiais.</p>
+                        <p data-translate="faq.q5.answer">Trabalhamos com ambos! Temos soluções específicas para dentistas individuais e também para laboratórios de grande volume. Entre em contato para conhecer nossas parcerias especiais.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Qual é a garantia de qualidade?</span>
+                        <span data-translate="faq.q6.question">Qual é a garantia de qualidade?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional. Nossa taxa de aprovação é superior a 98%.</p>
+                        <p data-translate="faq.q6.answer">Oferecemos 100% de garantia de satisfação. Se o projeto não atender suas expectativas, refazemos sem custo adicional. Nossa taxa de aprovação é superior a 98%.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Como faço para enviar meu caso?</span>
+                        <span data-translate="faq.q7.question">Como faço para enviar meu caso?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>É muito simples! Entre em contato via WhatsApp ou e-mail, envie os scans e fotos, descreva o caso e pronto. Você receberá uma proposta em até 24h e pode acompanhar tudo online.</p>
+                        <p data-translate="faq.q7.answer">É muito simples! Entre em contato via WhatsApp ou e-mail, envie os scans e fotos, descreva o caso e pronto. Você receberá uma proposta em até 24h e pode acompanhar tudo online.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Quais são as formas de pagamento?</span>
+                        <span data-translate="faq.q8.question">Quais são as formas de pagamento?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Aceitamos PIX, transferência bancária, cartão de crédito e boleto. Para laboratórios parceiros, oferecemos condições especiais de pagamento.</p>
+                        <p data-translate="faq.q8.answer">Aceitamos PIX, transferência bancária, cartão de crédito e boleto. Para laboratórios parceiros, oferecemos condições especiais de pagamento.</p>
                     </div>
                 </div>
             </div>
@@ -614,15 +619,15 @@
                     <h4 data-translate="footer.contact.title">Contatos</h4>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>São Paulo, SP - Brasil</span>
+                        <span data-translate="footer.contact.location">São Paulo, SP - Brasil</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+55 (11) 91717-5059</span>
+                        <span data-translate="footer.contact.phone">+55 (11) 91717-5059</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>contato@lumencad.com.br</span>
+                        <span data-translate="footer.contact.email">contato@lumencad.com.br</span>
                     </div>
                 </div>
             </div>

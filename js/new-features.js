@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const imgAfter = slider.querySelector('.img-after');
         const line = slider.querySelector('.comparison-line');
         
-        if (range && imgAfter && line) {
+        if (range && imgAfter && line) {image.png
             // Atualizar posição do slider
             range.addEventListener('input', (e) => {
                 const value = e.target.value;
@@ -184,6 +184,169 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.log('✅ New features loaded: FAQ Accordion & Before/After Slider');
+// ===========================
+// PORTFOLIO ENHANCED ANIMATIONS
+// ===========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced Portfolio Animations
+    initPortfolioAnimations();
+    initPortfolioHoverEffects();
+    initPortfolioLoadingStates();
+});
+
+function initPortfolioAnimations() {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    // Staggered entrance animation
+    portfolioItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px) rotateX(15deg)';
+        
+        // Trigger animation with delay
+        setTimeout(() => {
+            item.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0) rotateX(0deg)';
+        }, index * 100);
+    });
+}
+
+function initPortfolioHoverEffects() {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    portfolioItems.forEach(item => {
+        // Enhanced hover effects
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-12px) rotateX(5deg) rotateY(5deg)';
+            this.style.boxShadow = `
+                0 20px 40px rgba(91, 163, 208, 0.2),
+                0 0 30px rgba(91, 163, 208, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1)
+            `;
+            
+            // Add glow effect to image
+            const image = this.querySelector('.portfolio-image');
+            if (image) {
+                image.style.filter = 'brightness(1.1) contrast(1.1) saturate(1.1)';
+            }
+            
+            // Add shimmer effect
+            addShimmerEffect(this);
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) rotateX(0deg) rotateY(0deg)';
+            this.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            
+            // Remove glow effect
+            const image = this.querySelector('.portfolio-image');
+            if (image) {
+                image.style.filter = 'brightness(1) contrast(1) saturate(1)';
+            }
+            
+            // Remove shimmer effect
+            removeShimmerEffect(this);
+        });
+        
+        // Enhanced click effects
+        item.addEventListener('mousedown', function() {
+            this.style.transform = 'translateY(-8px) rotateX(2deg) rotateY(2deg) scale(0.98)';
+        });
+        
+        item.addEventListener('mouseup', function() {
+            this.style.transform = 'translateY(-12px) rotateX(5deg) rotateY(5deg) scale(1)';
+        });
+    });
+}
+
+function addShimmerEffect(element) {
+    const shimmer = document.createElement('div');
+    shimmer.className = 'shimmer-effect';
+    shimmer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0.2) 50%, 
+            transparent 100%);
+        animation: shimmer 1.5s ease-in-out;
+        pointer-events: none;
+        z-index: 1;
+    `;
+    
+    element.style.position = 'relative';
+    element.appendChild(shimmer);
+    
+    // Remove shimmer after animation
+    setTimeout(() => {
+        if (shimmer.parentNode) {
+            shimmer.parentNode.removeChild(shimmer);
+        }
+    }, 1500);
+}
+
+function removeShimmerEffect(element) {
+    const shimmer = element.querySelector('.shimmer-effect');
+    if (shimmer) {
+        shimmer.remove();
+    }
+}
+
+function initPortfolioLoadingStates() {
+    const portfolioGrid = document.getElementById('portfolioGrid');
+    
+    if (portfolioGrid) {
+        // Add loading state while images load
+        const images = portfolioGrid.querySelectorAll('.portfolio-image');
+        
+        images.forEach(img => {
+            img.addEventListener('load', function() {
+                this.parentElement.classList.remove('loading');
+                this.style.opacity = '1';
+            });
+            
+            img.addEventListener('error', function() {
+                this.parentElement.classList.remove('loading');
+                this.style.opacity = '0.5';
+                console.warn('Failed to load portfolio image:', this.src);
+            });
+            
+            // Add loading class initially
+            img.parentElement.classList.add('loading');
+            img.style.opacity = '0';
+        });
+    }
+}
+
+// Add shimmer animation keyframes
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    .portfolio-item.loading {
+        animation: portfolioPulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes portfolioPulse {
+        0%, 100% {
+            opacity: 0.6;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+console.log('✅ New features loaded: FAQ Accordion, Before/After Slider, Enhanced Portfolio Animations & Enhanced Modal');
 
 

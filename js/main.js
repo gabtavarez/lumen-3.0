@@ -9,14 +9,29 @@
     let currentLang = 'pt';
     let portfolioItems = [];
     let currentModalIndex = 0;
-    let currentTheme = 'dark';
     
     // Language data
     const languageData = {
-        pt: { flag: '🇧🇷', name: 'Português', code: 'PT' },
-        en: { flag: '🇺🇸', name: 'English', code: 'EN' },
-        de: { flag: '🇩🇪', name: 'Deutsch', code: 'DE' },
-        es: { flag: '🇪🇸', name: 'Español', code: 'ES' }
+        pt: { 
+            flag: '<svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#009B3A"/><path d="M0 7.5L10 0L20 7.5L10 15Z" fill="#FEDD00"/><circle cx="10" cy="7.5" r="3" fill="#002776"/></svg>', 
+            name: 'Português', 
+            code: 'PT' 
+        },
+        en: { 
+            flag: '<svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" fill="#B22234"/><rect width="20" height="1.15" fill="#FFFFFF"/><rect y="2.3" width="20" height="1.15" fill="#FFFFFF"/><rect y="4.6" width="20" height="1.15" fill="#FFFFFF"/><rect y="6.9" width="20" height="1.15" fill="#FFFFFF"/><rect y="9.2" width="20" height="1.15" fill="#FFFFFF"/><rect y="11.5" width="20" height="1.15" fill="#FFFFFF"/><rect y="13.85" width="20" height="1.15" fill="#FFFFFF"/><rect width="7.7" height="8.05" fill="#3C3B6E"/></svg>', 
+            name: 'English', 
+            code: 'EN' 
+        },
+        de: { 
+            flag: '<svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="5" fill="#000000"/><rect y="5" width="20" height="5" fill="#DD0000"/><rect y="10" width="20" height="5" fill="#FFCE00"/></svg>', 
+            name: 'Deutsch', 
+            code: 'DE' 
+        },
+        es: { 
+            flag: '<svg width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="3" fill="#C60B1E"/><rect y="3" width="20" height="9" fill="#FFC400"/><rect y="12" width="20" height="3" fill="#C60B1E"/></svg>', 
+            name: 'Español', 
+            code: 'ES' 
+        }
     };
 
     // ===========================
@@ -45,7 +60,7 @@
             const currentFlag = document.getElementById('currentFlag');
             const currentLangCode = document.getElementById('currentLang');
             
-            if (currentFlag) currentFlag.textContent = langInfo.flag;
+            if (currentFlag) currentFlag.innerHTML = langInfo.flag;
             if (currentLangCode) currentLangCode.textContent = langInfo.code;
         }
 
@@ -60,6 +75,9 @@
         // Close dropdown
         const selector = document.querySelector('.language-selector');
         if (selector) selector.classList.remove('active');
+
+        // Update Schema.org structured data
+        updateSchemaData(lang);
 
         // Save preference
         localStorage.setItem('preferred-language', lang);
@@ -79,6 +97,142 @@
         }
         
         changeLanguage(initialLang);
+    }
+
+    // Update Schema.org structured data based on language
+    function updateSchemaData(lang) {
+        const schemaTranslations = {
+            pt: {
+                name: "Lumen CAD Design",
+                description: "Estúdio de odontologia digital especializado em design CAD para próteses dentárias de alta precisão",
+                serviceType: [
+                    "Design CAD Odontológico",
+                    "Próteses Dentárias Digitais",
+                    "Planejamento Digital",
+                    "Implantodontia Digital"
+                ],
+                offerCatalog: "Serviços de Odontologia Digital",
+                services: [
+                    {
+                        name: "Restaurações Estéticas",
+                        description: "Design CAD de alta precisão para restaurações com foco na estética e funcionalidade"
+                    },
+                    {
+                        name: "Próteses Fixas",
+                        description: "Pontes e estruturas protéticas complexas com distribuição oclusal ideal"
+                    },
+                    {
+                        name: "Implantodontia Digital",
+                        description: "Soluções completas para reabilitação sobre implantes"
+                    }
+                ]
+            },
+            en: {
+                name: "Lumen CAD Design",
+                description: "Digital dentistry studio specialized in high-precision CAD design for dental prosthetics",
+                serviceType: [
+                    "Dental CAD Design",
+                    "Digital Dental Prosthetics",
+                    "Digital Planning",
+                    "Digital Implantology"
+                ],
+                offerCatalog: "Digital Dentistry Services",
+                services: [
+                    {
+                        name: "Aesthetic Restorations",
+                        description: "High-precision CAD design for restorations focused on aesthetics and functionality"
+                    },
+                    {
+                        name: "Fixed Prostheses",
+                        description: "Bridges and complex prosthetic structures with ideal occlusal distribution"
+                    },
+                    {
+                        name: "Digital Implantology",
+                        description: "Complete solutions for implant-supported rehabilitation"
+                    }
+                ]
+            },
+            de: {
+                name: "Lumen CAD Design",
+                description: "Digitales Zahnmedizinisches Studio spezialisiert auf hochpräzises CAD-Design für Zahnprothesen",
+                serviceType: [
+                    "Zahnmedizinisches CAD-Design",
+                    "Digitale Zahnprothesen",
+                    "Digitale Planung",
+                    "Digitale Implantologie"
+                ],
+                offerCatalog: "Digitale Zahnmedizinische Dienstleistungen",
+                services: [
+                    {
+                        name: "Ästhetische Restaurationen",
+                        description: "Hochpräzises CAD-Design für Restaurationen mit Fokus auf Ästhetik und Funktionalität"
+                    },
+                    {
+                        name: "Festsitzende Prothesen",
+                        description: "Brücken und komplexe prothetische Strukturen mit idealer okklusaler Verteilung"
+                    },
+                    {
+                        name: "Digitale Implantologie",
+                        description: "Komplette Lösungen für implantatgetragene Rehabilitation"
+                    }
+                ]
+            },
+            es: {
+                name: "Lumen CAD Design",
+                description: "Estudio de odontología digital especializado en diseño CAD de alta precisión para prótesis dentales",
+                serviceType: [
+                    "Diseño CAD Odontológico",
+                    "Prótesis Dentales Digitales",
+                    "Planificación Digital",
+                    "Implantología Digital"
+                ],
+                offerCatalog: "Servicios de Odontología Digital",
+                services: [
+                    {
+                        name: "Restauraciones Estéticas",
+                        description: "Diseño CAD de alta precisión para restauraciones con enfoque en estética y funcionalidad"
+                    },
+                    {
+                        name: "Prótesis Fijas",
+                        description: "Puentes y estructuras protésicas complejas con distribución oclusal ideal"
+                    },
+                    {
+                        name: "Implantología Digital",
+                        description: "Soluciones completas para rehabilitación sobre implantes"
+                    }
+                ]
+            }
+        };
+
+        const translation = schemaTranslations[lang] || schemaTranslations.pt;
+        
+        // Update meta tags
+        document.querySelector('meta[name="description"]').setAttribute('content', translation.description);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', translation.description);
+        document.querySelector('meta[property="twitter:description"]').setAttribute('content', translation.description);
+        
+        // Update structured data if needed
+        const schemaScript = document.querySelector('script[type="application/ld+json"]');
+        if (schemaScript) {
+            try {
+                const schemaData = JSON.parse(schemaScript.textContent);
+                schemaData.name = translation.name;
+                schemaData.description = translation.description;
+                schemaData.serviceType = translation.serviceType;
+                schemaData.hasOfferCatalog.name = translation.offerCatalog;
+                schemaData.hasOfferCatalog.itemListElement = translation.services.map(service => ({
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": service.name,
+                        "description": service.description
+                    }
+                }));
+                schemaScript.textContent = JSON.stringify(schemaData, null, 2);
+            } catch (e) {
+                console.warn('Could not update schema data:', e);
+            }
+        }
     }
 
     // ===========================
@@ -159,7 +313,7 @@
     async function loadPortfolioData() {
         // Try to load from JSON file first
         try {
-            const response = await fetch('data/portfolio.json');
+            const response = await fetch(`data/portfolio.json?v=${Date.now()}&cache=${Math.random()}`);
             if (response.ok) {
                 const data = await response.json();
                 portfolioItems = data.items || [];
@@ -224,7 +378,7 @@
             portfolioItem.setAttribute('data-index', index);
             
             portfolioItem.innerHTML = `
-                <img class="portfolio-image" src="${item.image}" alt="${getTranslation(currentLang, item.titleKey)}" loading="lazy">
+                <img class="portfolio-image" src="${item.image}?v=${Date.now()}&cache=${Math.random()}" alt="${getTranslation(currentLang, item.titleKey)}" loading="lazy">
                 <div class="portfolio-info">
                     <h3 data-translate="${item.titleKey}">${getTranslation(currentLang, item.titleKey)}</h3>
                     <p data-translate="${item.descriptionKey}">${getTranslation(currentLang, item.descriptionKey)}</p>
@@ -254,7 +408,7 @@
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
 
-        modalImage.src = item.image;
+        modalImage.src = `${item.image}?v=${Date.now()}&cache=${Math.random()}`;
         modalTitle.textContent = getTranslation(currentLang, item.titleKey);
         modalDescription.textContent = getTranslation(currentLang, item.descriptionKey);
 
@@ -397,43 +551,6 @@
         });
     }
 
-    // ===========================
-    // Theme Toggle
-    // ===========================
-
-    function initThemeToggle() {
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('preferred-theme');
-        if (savedTheme) {
-            currentTheme = savedTheme;
-            applyTheme(currentTheme);
-        }
-
-        // Theme toggle event
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                applyTheme(currentTheme);
-                localStorage.setItem('preferred-theme', currentTheme);
-            });
-        }
-    }
-
-    function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        const themeIcon = document.getElementById('themeIcon');
-        
-        if (themeIcon) {
-            if (theme === 'dark') {
-                themeIcon.className = 'fas fa-moon';
-            } else {
-                themeIcon.className = 'fas fa-sun';
-            }
-        }
-    }
 
     // ===========================
     // Smooth Loading
@@ -493,7 +610,6 @@
         console.log('🦷 Lumen CAD Design - Initializing...');
         
         initLanguage();
-        initThemeToggle();
         initLoadingScreen();
         initNavigation();
         initLanguageSelector();
@@ -519,7 +635,6 @@
         changeLanguage,
         openModal,
         closeModal,
-        applyTheme,
         portfolioItems
     };
 

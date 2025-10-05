@@ -10,6 +10,8 @@ const translations = {
             services: "Serviços",
             about: "Sobre",
             workflow: "Workflow",
+            beforeAfter: "Antes/Depois",
+            faq: "FAQ",
             guarantees: "Garantias"
         },
         hero: {
@@ -140,7 +142,10 @@ const translations = {
         footer: {
             tagline: "Se você tem alguma dúvida ou quer conhecer a Lumen, entre em contato. Será um prazer atendê-lo!",
             contact: {
-                title: "Contatos"
+                title: "Contatos",
+                location: "São Paulo, SP - Brasil",
+                phone: "+55 (11) 91717-5059",
+                email: "contato@lumencad.com.br"
             },
             copyright: "Copyright © Lumen CAD Design - All rights reserved"
         },
@@ -149,9 +154,6 @@ const translations = {
         },
         loading: {
             text: "Carregando..."
-        },
-        theme: {
-            toggle: "Alternar tema"
         },
         pwa: {
             install: "Instalar App",
@@ -221,6 +223,8 @@ const translations = {
             services: "Services",
             about: "About",
             workflow: "Workflow",
+            beforeAfter: "Before/After",
+            faq: "FAQ",
             guarantees: "Guarantees"
         },
         hero: {
@@ -351,7 +355,10 @@ const translations = {
         footer: {
             tagline: "If you have any questions or want to know Lumen, please contact us. It will be a pleasure to assist you!",
             contact: {
-                title: "Contact"
+                title: "Contact",
+                location: "São Paulo, SP - Brazil",
+                phone: "+55 (11) 91717-5059",
+                email: "contato@lumencad.com.br"
             },
             copyright: "Copyright © Lumen CAD Design - All rights reserved"
         },
@@ -360,9 +367,6 @@ const translations = {
         },
         loading: {
             text: "Loading..."
-        },
-        theme: {
-            toggle: "Toggle theme"
         },
         pwa: {
             install: "Install App",
@@ -432,6 +436,8 @@ const translations = {
             services: "Dienstleistungen",
             about: "Über uns",
             workflow: "Arbeitsablauf",
+            beforeAfter: "Vorher/Nachher",
+            faq: "FAQ",
             guarantees: "Garantien"
         },
         hero: {
@@ -562,7 +568,10 @@ const translations = {
         footer: {
             tagline: "Wenn Sie Fragen haben oder Lumen kennenlernen möchten, kontaktieren Sie uns bitte. Es wird uns eine Freude sein, Ihnen zu helfen!",
             contact: {
-                title: "Kontakt"
+                title: "Kontakt",
+                location: "São Paulo, SP - Brasilien",
+                phone: "+55 (11) 91717-5059",
+                email: "contato@lumencad.com.br"
             },
             copyright: "Copyright © Lumen CAD Design - Alle Rechte vorbehalten"
         },
@@ -571,9 +580,6 @@ const translations = {
         },
         loading: {
             text: "Laden..."
-        },
-        theme: {
-            toggle: "Thema wechseln"
         },
         pwa: {
             install: "App installieren",
@@ -643,6 +649,8 @@ const translations = {
             services: "Servicios",
             about: "Acerca de",
             workflow: "Flujo de trabajo",
+            beforeAfter: "Antes/Después",
+            faq: "FAQ",
             guarantees: "Garantías"
         },
         hero: {
@@ -773,7 +781,10 @@ const translations = {
         footer: {
             tagline: "Si tiene alguna pregunta o quiere conocer Lumen, contáctenos. ¡Será un placer atenderle!",
             contact: {
-                title: "Contacto"
+                title: "Contacto",
+                location: "São Paulo, SP - Brasil",
+                phone: "+55 (11) 91717-5059",
+                email: "contato@lumencad.com.br"
             },
             copyright: "Copyright © Lumen CAD Design - Todos los derechos reservados"
         },
@@ -782,9 +793,6 @@ const translations = {
         },
         loading: {
             text: "Cargando..."
-        },
-        theme: {
-            toggle: "Cambiar tema"
         },
         pwa: {
             install: "Instalar App",
