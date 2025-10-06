@@ -310,6 +310,24 @@
     // Portfolio System
     // ===========================
 
+    // Image optimization and lazy loading
+    function optimizeImageUrl(url, width = 400, quality = 80) {
+        // For Unsplash images, optimize parameters
+        if (url.includes('unsplash.com')) {
+            return url.replace(/w=\d+&h=\d+/, `w=${width}&h=${Math.round(width * 0.75)}&q=${quality}&auto=format&fit=crop`);
+        }
+        return url;
+    }
+
+    function preloadCriticalImages() {
+        // Preload first 2 portfolio images for better UX
+        const criticalImages = portfolioItems.slice(0, 2);
+        criticalImages.forEach(item => {
+            const img = new Image();
+            img.src = optimizeImageUrl(item.image, 600, 85);
+        });
+    }
+
     async function loadPortfolioData() {
         // Try to load from JSON file first
         try {
@@ -329,40 +347,42 @@
                     id: 1,
                     titleKey: 'portfolio.anterior.title',
                     descriptionKey: 'portfolio.anterior.description',
-                    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop',
+                    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop&q=80&auto=format',
                     category: 'anterior'
                 },
                 {
                     id: 2,
                     titleKey: 'portfolio.bridges.title',
                     descriptionKey: 'portfolio.bridges.description',
-                    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&h=600&fit=crop',
+                    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&h=300&fit=crop&q=80&auto=format',
                     category: 'bridges'
                 },
                 {
                     id: 3,
                     titleKey: 'portfolio.posterior.title',
                     descriptionKey: 'portfolio.posterior.description',
-                    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop',
+                    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop&q=80&auto=format',
                     category: 'posterior'
                 },
                 {
                     id: 4,
                     titleKey: 'portfolio.implants.title',
                     descriptionKey: 'portfolio.implants.description',
-                    image: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&h=600&fit=crop',
+                    image: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop&q=80&auto=format',
                     category: 'implants'
                 },
                 {
                     id: 5,
                     titleKey: 'portfolio.full.title',
                     descriptionKey: 'portfolio.full.description',
-                    image: 'https://images.unsplash.com/photo-1609840112855-9ab5f840f525?w=800&h=600&fit=crop',
+                    image: 'https://images.unsplash.com/photo-1609840112855-9ab5f840f525?w=400&h=300&fit=crop&q=80&auto=format',
                     category: 'full'
                 }
             ];
         }
 
+        // Preload critical images
+        preloadCriticalImages();
         renderPortfolio();
     }
 
@@ -377,8 +397,27 @@
             portfolioItem.className = 'portfolio-item fade-in';
             portfolioItem.setAttribute('data-index', index);
             
+            // Create optimized image with lazy loading
+            const optimizedImageUrl = optimizeImageUrl(item.image, 400, 80);
+            const placeholderUrl = `data:image/svg+xml;base64,${btoa(`
+                <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#f0f0f0"/>
+                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-family="Arial" font-size="14">Carregando...</text>
+                </svg>
+            `)}`;
+            
             portfolioItem.innerHTML = `
-                <img class="portfolio-image" src="${item.image}?v=${Date.now()}&cache=${Math.random()}" alt="${getTranslation(currentLang, item.titleKey)}" loading="lazy">
+                <div class="portfolio-image-container">
+                    <img class="portfolio-image" 
+                         src="${placeholderUrl}" 
+                         data-src="${optimizedImageUrl}" 
+                         alt="${getTranslation(currentLang, item.titleKey)}" 
+                         loading="lazy"
+                         decoding="async">
+                    <div class="image-loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
                 <div class="portfolio-info">
                     <h3 data-translate="${item.titleKey}">${getTranslation(currentLang, item.titleKey)}</h3>
                     <p data-translate="${item.descriptionKey}">${getTranslation(currentLang, item.descriptionKey)}</p>
@@ -389,8 +428,61 @@
             grid.appendChild(portfolioItem);
         });
 
+        // Initialize lazy loading
+        initLazyLoading();
+        
         // Trigger animations
         setTimeout(() => observeElements(), 100);
+    }
+
+    // Advanced lazy loading with intersection observer
+    function initLazyLoading() {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const container = img.closest('.portfolio-image-container');
+                    const loadingSpinner = container?.querySelector('.image-loading');
+                    
+                    // Show loading spinner
+                    if (loadingSpinner) {
+                        loadingSpinner.style.display = 'flex';
+                    }
+                    
+                    // Load image
+                    const newImg = new Image();
+                    newImg.onload = () => {
+                        img.src = newImg.src;
+                        img.classList.add('loaded');
+                        if (loadingSpinner) {
+                            loadingSpinner.style.display = 'none';
+                        }
+                    };
+                    newImg.onerror = () => {
+                        img.src = `data:image/svg+xml;base64,${btoa(`
+                            <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#f8f8f8"/>
+                                <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#ccc" font-family="Arial" font-size="12">Erro ao carregar</text>
+                            </svg>
+                        `)}`;
+                        if (loadingSpinner) {
+                            loadingSpinner.style.display = 'none';
+                        }
+                    };
+                    newImg.src = img.dataset.src;
+                    
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.1
+        });
+
+        // Observe all lazy images
+        document.querySelectorAll('.portfolio-image[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
     }
 
     // ===========================
